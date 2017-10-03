@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio Front</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" 
+              type="image/ico" 
+              href="img/logo.ico"/>
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+        <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="bower_components/chart.js/dist/Chart.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-touch/angular-touch.min.js"></script>
+
+        <link type="text/css" rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
+        <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+
+        <script type="text/javascript" src="js/app.js"></script>
+
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+    </head>
+    <body ng-app="ejercicio.frontend">
+        <nav class="navbar navbar-default main-nav" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h3 class="modal-title" id="modal-title">
+                    <img src="img/logo.svg" id="logo" alt="logo debitum"/>
+                    debitum</h3>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <button class="btn btn-link btn-notificaciones">
+                    <i class="fa fa-bell fa-2x" aria-hidden="true">
+                        <span class="badge notificaciones">30</span>
+                    </i>
+                </button>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <button type="button" class="btn btn-default">
+                            Cuenta bancaria
+                            <br/>
+                            <span class="etiqueta-verde">Etiqueta/HSBC</span>
+                            <span class="caret"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-default">
+                            <span>
+                                Cuenta SAT
+                                <br/>
+                                <span class="etiqueta-verde">RFC - 3456</span>
+                            </span>
+                            <span class="caret"></span>
+                        </button>
+                    </li>
+                </ul>
+
+            </div>
+
+
+        </nav>
+        <nav class="navbar navbar-default second-nav">
+            <div class="row">
+                <div class="col col-sm-3">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-link">
+
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Buscar sección, documento, nombre">
+                    </div>
+                    <!-- /input-group -->
+                </div>
+                <div class="col col-sm-7">
+                    <button type="button" class="btn btn-default">
+                        Todo
+                    </button>
+                    <button type="button" class="btn btn-default">
+                        Anual
+                        <span class="caret"></span>
+                    </button>
+                    <button type="button" class="btn btn-default">
+                        Mensual
+                        <span class="caret"></span>
+                    </button>
+                    <span class="label-gray">Por periodo:</span>
+
+                    <input class="input-gray" placeholder="dd-mm-aa"/>
+                    <input class="input-gray" placeholder="dd-mm-aa"/>
+
+                </div>
+                <div class="col col-sm-2">
+
+                </div>
+            </div>
+        </nav>
+
+
+    </body>
+</html>

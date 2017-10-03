@@ -1,0 +1,78 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 1/10/2017, 06:55:48 PM
+    Author     : eislas
+*/
+@font-face {
+    font-family: comfortaa-regular;
+    src: url(fonts/Comfortaa-FontZillion/Fonts/comfortaa-regular.ttf) format('truetype'), url(fonts/Comfortaa-FontZillion/Fonts/comfortaa-regular.woff) format('woff');
+}
+#logo{
+    width: 25px;
+}
+
+#modal-title{
+    font-family: comfortaa-regular;
+    padding: 8px;
+}
+.navbar{
+    border-radius: 0px;
+    margin-bottom: 0px;
+}
+.navbar-default {
+    background-color: #fff;
+    padding: 10px;
+}
+ul.navbar-nav{
+    float: right;
+}
+ul.navbar-nav li{
+    padding-left: 10px;
+}
+
+.btn-default {
+    color: #9b9b9b;
+    text-align-last: left;
+}
+.etiqueta-verde{
+    color: #01b8a4;
+}
+
+.main-nav .btn .caret{
+    float: right;
+    margin-left: 20px;
+}
+
+.btn .caret{
+    color: black;
+
+}
+
+.notificaciones{
+    background-color: #ff455d;
+    float: right;
+    left: -15px;
+    box-shadow: 0px 0px 0px 2px white;
+}
+
+.btn-notificaciones{
+    float:right;
+}
+
+.second-nav .btn, .second-nav input[type="text"]{
+    border: none;
+    -webkit-appearance: none;
+    box-shadow: none;
+}
+
+.label-gray{
+    color: #9b9b9b;
+}
+
+-input-gray{
+    
+}
