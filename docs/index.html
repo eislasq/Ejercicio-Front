@@ -24,6 +24,7 @@
         <script type="text/javascript" src="js/app.js"></script>
 
         <link type="text/css" rel="stylesheet" href="css/style.css">
+        <link type="text/css" rel="stylesheet" href="css/style-md.css" media="(min-width: 768px)">
     </head>
     <body ng-app="ejercicio.frontend">
         <nav class="navbar navbar-default main-nav" role="navigation">
@@ -72,7 +73,7 @@
         </nav>
         <nav class="navbar navbar-default second-nav">
             <div class="row">
-                <div class="col col-sm-3">
+                <div class="col col-sm-2">
                     <div class="input-group">
                         <span class="input-group-btn">
                             <button class="btn btn-link">
@@ -84,7 +85,7 @@
                     </div>
                     <!-- /input-group -->
                 </div>
-                <div class="col col-sm-7">
+                <div class="col col-sm-8">
                     <button type="button" class="btn btn-default">
                         Todo
                     </button>
@@ -103,11 +104,57 @@
 
                 </div>
                 <div class="col col-sm-2">
-
+                    <button class="btn btn-success">
+                        <i class="fa fa-repeat"></i>
+                        Actualizar Cuentas
+                    </button>
                 </div>
             </div>
         </nav>
 
+        <div id="sidebar">
+            <ul class="menu-options">
+                <li class="menu-item active">
+                    <i class="menu-icon fa fa-tachometer fa-2x"></i>
+                    <span class="menu-text">Dashboard</span>
+                </li>
+                <li class="menu-item">
+                    <i class="menu-icon fa fa-file fa-2x"></i>
+                    <span class="menu-text">Facturación</span>
+                </li>
+                <li class="menu-item">
+                    <i class="menu-icon fa fa-cogs fa-2x"></i>
+                    <span class="menu-text">Coniciaciones</span>
+                </li>
+                <li class="menu-item">
+                    <i class="menu-icon fa fa-users fa-2x"></i>
+                    <span class="menu-text">Clientes</span>
+                </li>
+                <li class="menu-item">
+                    <i class="menu-icon fa fa-bar-chart fa-2x"></i>
+                    <span class="menu-text">Reportes</span>
+                </li>
+                <li class="menu-item">
+                    <i class="menu-icon fa fa-gavel fa-2x"></i>
+                    <span class="menu-text">Declaraciones</span>
+                </li>
+            </ul>
+        </div>
 
+        <div class="content">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="col-md-9">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                </div>
+                <div class="col-md-5">
+                </div>
+            </div>
+        </div>
     </body>
 </html>

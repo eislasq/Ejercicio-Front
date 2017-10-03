@@ -69,10 +69,52 @@ ul.navbar-nav li{
     box-shadow: none;
 }
 
+.second-nav{
+    margin-left: 56px;
+}
+
 .label-gray{
     color: #9b9b9b;
 }
 
--input-gray{
-    
+.input-gray{
+    width: 80px;
+    border-radius: 5px;
+    border: solid 1px #e4e4e4;
+    padding: 5px;
+}
+
+.btn-success{
+    background-color: #01b8a4;
+}
+
+#sidebar{
+    background-color: #2b2b2e;
+    display: inline-block;
+    position: fixed;
+    bottom: 0px;
+    top: 72px;
+    box-shadow: 56px 0px 0px 0px #222326 inset;
+}
+#sidebar ul.menu-options{
+    list-style: none;
+    padding: 0px;
+}
+#sidebar .menu-item{
+    color: #858687;
+}
+#sidebar .menu-item.active, #sidebar .menu-item:hover{
+    color: white;
+}
+#sidebar .menu-item.active .menu-icon{
+    background-color: #01b8a4;
+}
+#sidebar .menu-item .menu-text{
+    display: none;
+    padding: 10px 20px;
+}
+
+#sidebar .menu-icon{
+    padding: 12px;
+    width: 55px;
 }
