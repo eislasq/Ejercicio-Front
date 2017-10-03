@@ -19,3 +19,18 @@ and open the template in the editor.
 .second-nav{
     margin-left: 0px;
 }
+
+.container{
+    padding-left: 170px;
+    padding-top: 30px;
+}
+
+
+.recordatorio, .mini-charts>div{
+    height: 130px;
+}
+
+.mini-charts>div:first-child .mini-chart{
+    /*border-left: none;*/
+    box-shadow: none;
+}

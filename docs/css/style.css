@@ -11,6 +11,10 @@ and open the template in the editor.
     font-family: comfortaa-regular;
     src: url(fonts/Comfortaa-FontZillion/Fonts/comfortaa-regular.ttf) format('truetype'), url(fonts/Comfortaa-FontZillion/Fonts/comfortaa-regular.woff) format('woff');
 }
+
+html, body{
+    background-color: #f2f2f2;
+}
 #logo{
     width: 25px;
 }
@@ -36,7 +40,7 @@ ul.navbar-nav li{
 
 .btn-default {
     color: #9b9b9b;
-    text-align-last: left;
+    text-align: left;
 }
 .etiqueta-verde{
     color: #01b8a4;
@@ -117,4 +121,29 @@ ul.navbar-nav li{
 #sidebar .menu-icon{
     padding: 12px;
     width: 55px;
+}
+
+.container{
+    padding-left: 65px;
+}
+
+.recordatorio{
+    background-color: #006b68;
+    color: white;
+    padding: 16px;
+}
+
+.mini-charts{
+    background-color: white;
+}
+.mini-chart{
+    margin: 15px 15px 15px 0px;
+    min-height: 113px;
+    padding-left: 15px;
+    /*border-left: solid #c8c8c8;*/
+    box-shadow: -5px 0px 0px #c8c8c8;
+}
+.row {
+    margin-right: 0px; 
+    margin-left: 0px; 
 }
