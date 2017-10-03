@@ -12,10 +12,10 @@
         <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
         <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="bower_components/chart.js/dist/Chart.min.js"></script>
-        <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
+        <!--<script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>-->
         <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
         <script type="text/javascript" src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
-        <script type="text/javascript" src="bower_components/angular-touch/angular-touch.min.js"></script>
+        <!--<script type="text/javascript" src="bower_components/angular-touch/angular-touch.min.js"></script>-->
 
         <link type="text/css" rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
         <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -27,7 +27,7 @@
         <link type="text/css" rel="stylesheet" href="css/style-md.css" media="(min-width: 768px)">
         <link type="text/css" rel="stylesheet" href="css/circle.css">
     </head>
-    <body ng-app="ejercicio.frontend">
+    <body ng-app="frontend">
         <nav class="navbar navbar-default main-nav" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
@@ -202,12 +202,70 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <br/>
+            <div class="row" ng-controller="ChartCtrl">
                 <div class="col-md-7">
+                    <div class="panel">
+                        <div class="chart-container">
+                            <h5 class="label-gray text-center">Ingresos / Egresos</h5>
+                            <canvas id="base" class="chart-bar"
+                                    chart-data="data" chart-labels="labels" chart-colors="colors"
+                                    chart-dataset-override="datasetOverride" chart-options="chartOptions">
+                            </canvas> 
+                        </div>
+                        <div class="footer text-center">
+                            <br/>
+                            <span><i class="icon-ingresos"></i>Ingresos</span>
+                            <span><i class="icon-egresos"></i>Egresos</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5" ng-controller="TableCtrl">
+                    <div class="panel">
+                        <div class="table-container">
+                            <br/>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <button class="btn" ng-class="{'btn-primary':display == 'ingresos', 'btn-link':display == 'egresos'}" ng-click="display = 'ingresos'">Ingresos</button>
+                                    <button class="btn" ng-class="{'btn-primary':display == 'egresos', 'btn-link':display == 'ingresos'}" ng-click="display = 'egresos'">Egresos</button>
+                                </div>
+                            </div>
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th ng-click="order = 'nombre'; reverse = !reverse">Descripción</th>
+                                        <th ng-click="order = 'monto'; reverse = !reverse">Cantidad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="registro in registros[display]|orderBy:order:reverse">
+                                        <td>{{registro.nombre|uppercase}}</td>
+                                        <td>{{registro.monto|currency : '$'}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="footer footer-pager">
+                            <br/>
+                            <label class="label-gray control-label">Página</label>
+                            <select class="page-selector">
+                                <option>1</option>
+                            </select>
+                            <span class="label-gray">
+                                0 - 0 de 0
+                            </span>
+                            <button class="btn btn-link">
+                                <i class="fa fa-angle-left fa-2x label-gray"></i>
+                            </button>
+                            <button class="btn btn-link">
+                                <i class="fa fa-angle-right fa-2x label-gray"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
     </body>
 </html>
