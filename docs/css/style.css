@@ -173,9 +173,13 @@ ul.navbar-nav li{
 
 .table-container tbody tr td, .table-container thead tr th{
     padding-left: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 250px;
+    overflow: hidden;
 }
 
-.panel{
+.my-panel{
     background-color: white;
     padding: 0px;
 }
