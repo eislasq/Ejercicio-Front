@@ -16,3 +16,4 @@ Puntos a evaluar:
 - Buenas practicas de programación
 - Diseño responsivo.
 
+![vista previa](https://eislasq.github.io/Ejercicio-Front/img/ejercicio%20front-end.png)
